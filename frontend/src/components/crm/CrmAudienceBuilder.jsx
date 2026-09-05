@@ -17,7 +17,9 @@ import {
   FileText, 
   Clock, 
   Activity,
-  Edit3
+  Edit3,
+  Zap,
+  AlertCircle
 } from 'lucide-react';
 import { useCrm } from './CrmContext';
 import crmApi from '../../api/crmApi';
@@ -33,8 +35,9 @@ const SUGGESTIONS = [
 ];
 
 export default function CrmAudienceBuilder({ setActivePage }) {
-  const { customers, audienceBuilderState, setAudienceBuilderState, setCampaignStudioState } = useCrm();
-  const { prompt, result } = audienceBuilderState;
+  const { customers = [], audienceBuilderState = {}, setAudienceBuilderState, setCampaignStudioState } = useCrm();
+  const prompt = audienceBuilderState?.prompt || '';
+  const result = audienceBuilderState?.result || null;
   const textareaRef = useRef(null);
 
   const setPrompt = (val) => setAudienceBuilderState(prev => ({ ...prev, prompt: val }));
@@ -508,7 +511,7 @@ export default function CrmAudienceBuilder({ setActivePage }) {
                 <div style={resultPanelCardStyle}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                     <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--text-primary)', margin: 0, fontFamily: 'var(--font-family-title)' }}>
-                      Matched Account Preview ({result.matches.length} of {result.sizeCount})
+                      Matched Account Preview ({result.matches?.length || 0} of {result.sizeCount || 0})
                     </h4>
                     <span style={{ fontSize: '0.68rem', color: 'var(--text-secondary)' }}>
                       Real PostgreSQL Debtor Records
@@ -528,7 +531,7 @@ export default function CrmAudienceBuilder({ setActivePage }) {
                         </tr>
                       </thead>
                       <tbody>
-                        {result.matches.map((m, i) => {
+                        {(result.matches || []).map((m, i) => {
                           const isCritical = m.riskLevel === 'Critical';
                           const isHigh = m.riskLevel === 'High';
                           
