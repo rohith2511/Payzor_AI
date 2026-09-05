@@ -32,7 +32,7 @@ class AnalyticsService:
             Campaign.campaign_type == "recovery"
         ).scalar() or 0.0
 
-        recovered_from_audits = db.query(func.sum(RecoveryAudit.amount_recovered)).filter(
+        recovered_from_audits = db.query(func.sum(RecoveryAudit.recovered_amount)).filter(
             RecoveryAudit.user_id == user_id,
             RecoveryAudit.status == "success"
         ).scalar() or 0.0
@@ -53,7 +53,7 @@ class AnalyticsService:
             audits_recovered = db.query(func.count(RecoveryAudit.id)).filter(
                 RecoveryAudit.user_id == user_id,
                 RecoveryAudit.status == "success",
-                RecoveryAudit.amount_recovered > 0
+                RecoveryAudit.recovered_amount > 0
             ).scalar() or 0
             customers_recovered = audits_recovered
 
