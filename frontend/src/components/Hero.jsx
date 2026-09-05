@@ -128,7 +128,7 @@ export default function Hero({ navigate }) {
             fontWeight: 400,
             margin: 0
           }}>
-            Enterprise receivables intelligence powered by Groq Qwen inference. Detect overdue exposure, prioritize high-risk debtors, synthesize empathetic dunning sequences, and automate settlement workflows.
+            Enterprise receivables intelligence powered by Google Gemini 3.7 Flash inference. Detect overdue exposure, prioritize high-risk debtors, synthesize empathetic dunning sequences, and automate settlement workflows.
           </p>
 
           {/* CTAs */}

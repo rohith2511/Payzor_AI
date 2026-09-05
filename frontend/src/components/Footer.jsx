@@ -84,7 +84,7 @@ export default function Footer() {
           <div style={footerColStyle}>
             <h5 style={footerColTitleStyle}>Technology</h5>
             <span style={footerLinkStyle}>FastAPI REST Gateway</span>
-            <span style={footerLinkStyle}>Groq Inference Engine</span>
+            <span style={footerLinkStyle}>Gemini 3.7 Flash Engine</span>
             <span style={footerLinkStyle}>Razorpay Webhooks</span>
             <span style={footerLinkStyle}>RBI Guardrail Filters</span>
           </div>

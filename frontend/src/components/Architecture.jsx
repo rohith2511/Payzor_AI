@@ -24,7 +24,7 @@ const NODES = [
     color: '#F8FAFC'
   },
   {
-    title: 'Groq Qwen 27B AI',
+    title: 'Gemini 3.7 Flash AI',
     subtitle: 'Financial Reasoning Tier',
     desc: 'Risk analysis, dunning copy & diagnosis',
     icon: <Cpu size={16} />,

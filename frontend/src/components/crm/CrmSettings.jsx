@@ -151,49 +151,98 @@ export default function CrmSettings({ user, setUser }) {
         <div style={navCardStyle}>
           <button 
             onClick={() => setActiveSubTab('profile')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'profile' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'profile' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'profile' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'profile' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'profile' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'profile' ? 700 : 500 
+            }}
           >
             <User size={14} /> Profile Settings
           </button>
           <button 
             onClick={() => setActiveSubTab('org')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'org' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'org' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'org' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'org' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'org' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'org' ? 700 : 500 
+            }}
           >
             <Building2 size={14} /> Organization
           </button>
           <button 
             onClick={() => setActiveSubTab('notifications')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'notifications' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'notifications' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'notifications' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'notifications' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'notifications' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'notifications' ? 700 : 500 
+            }}
           >
             <Bell size={14} /> Notifications
           </button>
           <button 
             onClick={() => setActiveSubTab('security')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'security' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'security' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'security' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'security' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'security' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'security' ? 700 : 500 
+            }}
           >
             <Shield size={14} /> Security
           </button>
           <button 
             onClick={() => setActiveSubTab('keys')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'keys' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'keys' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'keys' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'keys' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'keys' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'keys' ? 700 : 500 
+            }}
           >
             <Key size={14} /> API Keys
           </button>
           <button 
             onClick={() => setActiveSubTab('integrations')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'integrations' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'integrations' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'integrations' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'integrations' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'integrations' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'integrations' ? 700 : 500 
+            }}
           >
             <Database size={14} /> Integrations
           </button>
           <button 
             onClick={() => setActiveSubTab('ai')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'ai' ? '#f1f5f9' : 'transparent', fontWeight: activeSubTab === 'ai' ? 700 : 500 }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'ai' ? 'rgba(212, 175, 55, 0.15)' : 'transparent', 
+              color: activeSubTab === 'ai' ? 'var(--gold-primary)' : 'var(--text-secondary)',
+              border: activeSubTab === 'ai' ? '1px solid rgba(212, 175, 55, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'ai' ? 700 : 500 
+            }}
           >
             <Cpu size={14} /> AI Configuration
           </button>
           <button 
             onClick={() => setActiveSubTab('delete')} 
-            style={{ ...subTabButtonStyle, backgroundColor: activeSubTab === 'delete' ? '#fef2f2' : 'transparent', color: '#ef4444', fontWeight: activeSubTab === 'delete' ? 700 : 500, marginTop: '2rem' }}
+            style={{ 
+              ...subTabButtonStyle, 
+              backgroundColor: activeSubTab === 'delete' ? 'rgba(239, 68, 68, 0.15)' : 'transparent', 
+              color: '#ef4444', 
+              border: activeSubTab === 'delete' ? '1px solid rgba(239, 68, 68, 0.35)' : '1px solid transparent',
+              fontWeight: activeSubTab === 'delete' ? 700 : 500, 
+              marginTop: '2rem' 
+            }}
           >
             <Trash2 size={14} /> Delete Account
           </button>
@@ -372,17 +421,17 @@ export default function CrmSettings({ user, setUser }) {
           {/* AI CONFIGURATION */}
           {activeSubTab === 'ai' && (
             <div style={sectionStyle}>
-              <h3 style={sectionTitleStyle}>AI Configuration</h3>
+              <h3 style={sectionTitleStyle}>AI Engine Configuration</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                Configure your own Groq API Key to enable AI features like Campaign Studio and AI Copilot. 
-                <br/>Get your key from: <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer" style={{color: 'var(--blue-primary)'}}>https://console.groq.com/keys</a>
+                Configure your own Google Gemini API Key (<strong style={{ color: 'var(--gold-champagne)' }}>gemini-3.7-flash</strong>) to power natural language audience parsing, risk diagnostics, and AI recovery copilot.
+                <br/>Get your key from: <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" style={{color: 'var(--gold-primary)', fontWeight: 600}}>https://aistudio.google.com/app/apikey</a>
               </p>
               <div style={formGridStyle}>
                 <div style={{ gridColumn: '1 / -1' }}>
-                  <label style={labelStyle}>Groq API Key</label>
+                  <label style={labelStyle}>Google Gemini API Key</label>
                   <input 
                     type="password" 
-                    placeholder="gsk_**********************"
+                    placeholder="AIzaSy**********************"
                     value={aiKey} 
                     onChange={(e) => setAiKey(e.target.value)}
                     style={inputStyle}
@@ -393,7 +442,7 @@ export default function CrmSettings({ user, setUser }) {
                 <button onClick={handleSaveAiKey} disabled={isSaving} style={saveButtonStyle}>
                   {isSaving ? 'Saving...' : 'Save API Key'}
                 </button>
-                <button onClick={handleDeleteAiKey} disabled={isSaving} style={{...secondaryButtonStyle, color: '#ef4444', borderColor: '#fee2e2'}}>
+                <button onClick={handleDeleteAiKey} disabled={isSaving} style={{...secondaryButtonStyle, color: '#ef4444', borderColor: 'rgba(239, 68, 68, 0.3)'}}>
                   Delete API key
                 </button>
               </div>
