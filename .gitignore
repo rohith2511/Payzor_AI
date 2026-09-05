@@ -1,0 +1,36 @@
+# Payzor AI Platform Gitignore
+
+# Environment Files (Sensitive Secrets)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+*.sqlite3
+.venv/
+venv/
+ENV/
+backend/payzor.db
+backend/reachable_crm.db
+
+# Javascript / Node (Frontend)
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+
+# Logs & OS Files
+*.log
+.DS_Store
+Thumbs.db
+.agents/
+.gemini/

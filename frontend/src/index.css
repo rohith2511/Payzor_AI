@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ==========================================================================
+     PAYZOR AI LUXURY FINTECH THEME ENGINE (OBSIDIAN BLACK & METALLIC GOLD)
+     ========================================================================== */
+  
+  /* Primary Obsidian Backgrounds */
+  --bg-primary: #0A0A0B;          /* Deep Obsidian Void */
+  --bg-secondary: #0D0E12;        /* Rich Jet Black Canvas */
+  --bg-tertiary: #14151B;         /* Charcoal Slate Container */
+  --bg-dark: #060608;             /* Ultra Black */
+  --bg-dark-surface: #121318;     /* Surface Tier 1 */
+  --bg-card: #121318;             /* Card Surface */
+  --bg-card-hover: #181920;       /* Card Hover State */
+  --bg-elevated: #1A1B24;         /* Floating Modals & Drawers */
+  --bg-glass: rgba(18, 19, 24, 0.82);
+  --bg-glass-gold: rgba(212, 175, 55, 0.08);
+
+  /* High-Contrast Typography Hierarchy */
+  --text-primary: #F8FAFC;        /* Crisp Pure Luminescent White */
+  --text-secondary: #94A3B8;      /* Cool Slate Gray */
+  --text-muted: #64748B;          /* Muted Secondary Tone */
+  --text-inverse: #0A0A0B;        /* Deep Obsidian Text */
+  --text-gold: #E5C158;           /* Radiant Champagne Gold */
+  --text-gold-light: #F3E5AB;     /* Soft Gold */
+  --text-gold-gradient: linear-gradient(135deg, #FFF0BE 0%, #D4AF37 50%, #AA771C 100%);
+
+  /* Metallic Gold & Champagne Brand Accents */
+  --gold-primary: #D4AF37;        /* Polished Metallic Gold */
+  --gold-hover: #E5C158;          /* Bright Radiant Gold */
+  --gold-champagne: #F3E5AB;      /* Champagne Accent */
+  --gold-brass: #C5A059;          /* Polished Brass */
+  --gold-light: rgba(212, 175, 55, 0.12);
+  --gold-border: rgba(212, 175, 55, 0.28);
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #AA771C 100%);
+  --gold-gradient-shine: linear-gradient(135deg, #FFF0BE 0%, #D4AF37 50%, #8C6212 100%);
+
+  /* Primary Action Alias (Mapped to Metallic Gold for complete system unity) */
+  --blue-primary: #D4AF37;
+  --blue-hover: #E5C158;
+  --blue-light: rgba(212, 175, 55, 0.12);
+  --blue-border: rgba(212, 175, 55, 0.32);
+  --blue-glow: rgba(212, 175, 55, 0.25);
+
+  /* Fintech Semantic Status Colors (Calibrated for Obsidian Black Surfaces) */
+  /* Green / Emerald (Recovered, Settled, Healthy Yield) */
+  --green-primary: #10B981;
+  --green-hover: #059669;
+  --green-light: rgba(16, 185, 129, 0.14);
+  --green-border: rgba(16, 185, 129, 0.32);
+  --green-text: #34D399;
+  --green-glow: rgba(16, 185, 129, 0.22);
+
+  /* Red / Crimson (Revenue-at-Risk, Critical Exposure, Overdue Dues) */
+  --red-primary: #F43F5E;
+  --red-hover: #E11D48;
+  --red-light: rgba(244, 63, 94, 0.14);
+  --red-border: rgba(244, 63, 94, 0.35);
+  --red-text: #FB7185;
+  --red-glow: rgba(244, 63, 94, 0.25);
+
+  /* Amber / Gold (Warning, Promise-to-Pay, High Risk) */
+  --amber-primary: #F59E0B;
+  --amber-hover: #D97706;
+  --amber-light: rgba(245, 158, 11, 0.14);
+  --amber-border: rgba(245, 158, 11, 0.35);
+  --amber-text: #FBBF24;
+  --amber-glow: rgba(245, 158, 11, 0.25);
+
+  /* Purple / AI Intelligence Accent */
+  --purple-primary: #A855F7;
+  --purple-light: rgba(168, 85, 247, 0.14);
+  --purple-border: rgba(168, 85, 247, 0.35);
+  --purple-text: #C084FC;
+
+  /* Border and Line Tokens */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(212, 175, 55, 0.18);
+  --border-focus: #D4AF37;
+  --border-gold: rgba(212, 175, 55, 0.35);
+
+  /* Layout and Sizing Tokens */
+  --border-radius-xs: 4px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 14px;
+  --border-radius-xl: 20px;
+  --border-radius-full: 9999px;
+  
+  /* Luxury Obsidian & Metallic Gold Elevations */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.6), 0 0 8px rgba(212, 175, 55, 0.05);
+  --shadow-md: 0 6px 16px -2px rgba(0, 0, 0, 0.75), 0 0 14px rgba(212, 175, 55, 0.1);
+  --shadow-lg: 0 14px 28px -4px rgba(0, 0, 0, 0.85), 0 0 22px rgba(212, 175, 55, 0.16);
+  --shadow-xl: 0 24px 48px -6px rgba(0, 0, 0, 0.95), 0 0 32px rgba(212, 175, 55, 0.22);
+  --shadow-card-hover: 0 16px 32px -4px rgba(0, 0, 0, 0.9), 0 0 24px rgba(212, 175, 55, 0.28);
+  --shadow-premium: 0 20px 40px -8px rgba(0, 0, 0, 0.95), 0 0 28px rgba(212, 175, 55, 0.2);
+
+  /* Font Families */
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-title: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+}
+
+/* Layout Utilities */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-custom {
+    padding: 0 1rem;
+  }
+}
+
+/* Global overflow containment */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-primary);
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+/* Metallic Gold Text Gradient Utility */
+.text-gold-gradient {
+  background: var(--text-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Currency and Number Formatting Utility */
+.font-mono-numeric {
+  font-family: var(--font-family-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Refined Fintech Obsidian & Gold Card Utilities */
+.fintech-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.fintech-card:hover {
+  border-color: rgba(212, 175, 55, 0.38);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.fintech-card-subtle {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-md);
+  transition: border-color 0.2s ease;
+}
+
+.fintech-card-subtle:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+/* Semantic Badges in Dark Obsidian Mode */
+.badge-critical {
+  background-color: var(--red-light);
+  color: var(--red-text);
+  border: 1px solid var(--red-border);
+  font-weight: 700;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--border-radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-high {
+  background-color: var(--amber-light);
+  color: var(--amber-text);
+  border: 1px solid var(--amber-border);
+  font-weight: 700;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--border-radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-medium {
+  background-color: rgba(212, 175, 55, 0.12);
+  color: var(--text-gold);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-weight: 700;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--border-radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-low {
+  background-color: var(--green-light);
+  color: var(--green-text);
+  border: 1px solid var(--green-border);
+  font-weight: 700;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--border-radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-ptp {
+  background-color: rgba(212, 175, 55, 0.15);
+  color: #F3E5AB;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  font-weight: 700;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--border-radius-xs);
+  letter-spacing: 0.03em;
+}
+
+.badge-demo {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-gold {
+  background: var(--gold-light);
+  color: var(--text-gold);
+  border: 1px solid var(--gold-border);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+/* Glass Panels with Obsidian & Gold Glow */
+.glass-panel {
+  background: rgba(18, 19, 24, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Text Selection */
+::selection {
+  background-color: rgba(212, 175, 55, 0.3);
+  color: #FFFFFF;
+}
+
+/* Scrollbar in Luxury Dark Theme */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232530;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+@keyframes gold-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(212, 175, 55, 0.45);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animate-gold-pulse {
+  animation: gold-pulse 2.5s ease-in-out infinite;
+}
+
+/* Global Luxury Utility Buttons */
+.btn-fintech-primary {
+  background: var(--gold-gradient);
+  color: #0A0A0B;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: var(--border-radius-sm);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-fintech-primary:hover {
+  background: linear-gradient(135deg, #E5C158 0%, #C5A059 100%);
+  box-shadow: 0 4px 18px var(--gold-glow);
+  transform: translateY(-1px);
+}
+
+.btn-fintech-primary:active {
+  transform: translateY(0);
+}
+
+.btn-fintech-success {
+  background-color: var(--green-primary);
+  color: #0A0A0B;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-fintech-success:hover {
+  background-color: var(--green-hover);
+  box-shadow: 0 4px 16px var(--green-glow);
+  transform: translateY(-1px);
+}
+
+.btn-fintech-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-sm);
+  padding: 0.5rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-fintech-secondary:hover {
+  background-color: #1E202B;
+  border-color: rgba(212, 175, 55, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-fintech-gold-outline {
+  background-color: rgba(212, 175, 55, 0.08);
+  color: var(--text-gold);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-sm);
+  padding: 0.5rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-fintech-gold-outline:hover {
+  background-color: rgba(212, 175, 55, 0.18);
+  border-color: var(--gold-hover);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.2);
+}
